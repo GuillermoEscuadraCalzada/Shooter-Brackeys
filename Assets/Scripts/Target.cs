@@ -9,9 +9,17 @@ public class Target : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        if(health < 0f)
+        Debug.Log("Vida del objeto: " + health);
+        if(health <= 0f)
         {
-            Destroy(gameObject);
+            
+            if (GetComponent<Destructible>())
+            {
+                Destructible destructible = GetComponent<Destructible>();
+                destructible.enabled = true;
+                destructible.Start();
+                destructible.Destroyed();
+            }
         }
     }
 }

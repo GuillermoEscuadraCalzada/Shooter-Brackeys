@@ -6,6 +6,8 @@ TagManager:
   tags:
   - WCrate
   - BWCrate
+  - Bottle
+  - weapon
   layers:
   - Default
   - TransparentFX

@@ -9,8 +9,9 @@ public class Destructible : MonoBehaviour
 {
     public BrokenPrefabs brokenObjects;
     TypeObject typeObject = TypeObject.NIL;
-    private void Start()
+    public  void Start()
     {
+        enabled = false;
         brokenObjects = GameObject.Find("BrokenPrefabs").GetComponent<BrokenPrefabs>();
         string name =gameObject.tag;
         switch (name)
@@ -23,7 +24,7 @@ public class Destructible : MonoBehaviour
                 break;
         }
     }
-    private void OnMouseDown()
+    public void Destroyed()
     {
        
             Instantiate(brokenObjects.GetObject(typeObject) /*brokenObject*/, transform.position, Quaternion.identity);
