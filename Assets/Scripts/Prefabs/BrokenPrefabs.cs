@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BrokenPrefabs : MonoBehaviour
 {
+    public GameObject brokenCratePrefab;
+    public GameObject brokenBottlePrefab;
 
 
     public GameObject GetObject(TypeObject typeObject)
@@ -20,6 +22,4 @@ public class BrokenPrefabs : MonoBehaviour
                 return null;
         }
     }
-    public GameObject brokenCratePrefab;
-    public GameObject brokenBottlePrefab;
 }
